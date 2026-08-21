@@ -1,0 +1,906 @@
+fileFormatVersion: 2
+guid: f7ba49975d4da5942bec4f09e7c4ca69
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 961
+        width: 170
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e4fb261ba6be4478bd166342dacd29
+      internalID: -245315566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_1
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 998
+        width: 57
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc4a02651c2e194dbb20916756024ec
+      internalID: 850873073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_2
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 959
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28fa2f3ae2b0fcc4586fd2b385c73627
+      internalID: 692089333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_3
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 970
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05da8d89897b1314eb44e3235b567574
+      internalID: 1076631787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_4
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1015
+        width: 40
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4124a593868814f84dfdd09d73f2bc
+      internalID: 2021293031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 886
+        width: 170
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a80b2515ab393f46ba648bfd6f93ecf
+      internalID: -1081357922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_6
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 882
+        width: 165
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67adf972c1f4a384592a04692f5f439c
+      internalID: -1132944303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_7
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 934
+        width: 78
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3543b4365228ea4ca1e5aecea0cdc25
+      internalID: -1897734520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_8
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 912
+        width: 57
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e7754ecd6aeb84cb5706b576e5b4c3
+      internalID: 198532221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_9
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 882
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605b60779f7de9048bdf091889a28260
+      internalID: -70050353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_10
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 838
+        width: 58
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784c057f09028ed4c96ae958dfae579a
+      internalID: -265866422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_11
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 821
+        width: 199
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78750c7304a640041a9615bd0753aa28
+      internalID: -418419690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_12
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 853
+        width: 66
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14edf33428f1e5489dec1652c8ed206
+      internalID: 1418466296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_13
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 716
+        width: 172
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6af6ba1a50a3db4d8fea06ada1ad065
+      internalID: -2130190672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_14
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 746
+        width: 58
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2644e50c24d1c84409bdb8100c34449a
+      internalID: -797649432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_15
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 792
+        width: 57
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f0d50316160fe409897cb09a2cb9af
+      internalID: -1997943228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_16
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 755
+        width: 58
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7fe5f31cecc2c4cae117c4fcda1e21
+      internalID: 1161811768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_17
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 752
+        width: 155
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa85197a93de54c4397f92fd311159a4
+      internalID: 2023178910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 585
+        width: 190
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba229ef6ba759d40bb0a23cbf034242
+      internalID: 1575526176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_19
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 621
+        width: 175
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d59fbb0f93a95774d97510cbfbbe54f0
+      internalID: -400229178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_20
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 721
+        width: 64
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed960d9022e53514aa1af0416e2c7042
+      internalID: 293347136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_21
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 656
+        width: 50
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80aa856aa70bf0c4f9ace1d1bb391e49
+      internalID: 864499658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_22
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 630
+        width: 66
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ada2c32ad437b947adf7b485b08b3eb
+      internalID: -915027054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_23
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 590
+        width: 269
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d5ffff427fdec459eb497220043f4e
+      internalID: -193296240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_24
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 624
+        width: 70
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3673035955710b1439842918c438615a
+      internalID: -1808720087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_25
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 460
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52660d9316720149a2bb1b4a322bd41
+      internalID: 452077749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_26
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 445
+        width: 257
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e083c71f03bb94dae8322c85406aec
+      internalID: -150951419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_27
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 452
+        width: 62
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74ec0ec223aa60478a26cfc69d838c0
+      internalID: -1866711487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_28
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 449
+        width: 55
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e04dbba8413404199eee0159573532
+      internalID: -968853108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_29
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 440
+        width: 280
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c698cf2cb088f5b49b4b92988737af61
+      internalID: -770816270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_30
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 452
+        width: 61
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3713e15dbc09e6409593b4289d76179
+      internalID: 1905117046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_31
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 302
+        width: 55
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f09185e6fdc08d4cbbd637192c35a4b
+      internalID: -1393135618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_32
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 294
+        width: 339
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e415e52452acfe4a9318e70dc92bb5a
+      internalID: -1488630221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Msg_GetBean_2x_33
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 340
+        width: 588
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41d287affe73864d890545337207bc3
+      internalID: 996260401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HLDDZ_Msg_GetBean_2x_22: -915027054
+      HLDDZ_Msg_GetBean_2x_25: 452077749
+      HLDDZ_Msg_GetBean_2x_32: -1488630221
+      HLDDZ_Msg_GetBean_2x_31: -1393135618
+      HLDDZ_Msg_GetBean_2x_14: -797649432
+      HLDDZ_Msg_GetBean_2x_0: -245315566
+      HLDDZ_Msg_GetBean_2x_27: -1866711487
+      HLDDZ_Msg_GetBean_2x_6: -1132944303
+      HLDDZ_Msg_GetBean_2x_1: 850873073
+      HLDDZ_Msg_GetBean_2x_17: 2023178910
+      HLDDZ_Msg_GetBean_2x_20: 293347136
+      HLDDZ_Msg_GetBean_2x_29: -770816270
+      HLDDZ_Msg_GetBean_2x_13: -2130190672
+      HLDDZ_Msg_GetBean_2x_18: 1575526176
+      HLDDZ_Msg_GetBean_2x_28: -968853108
+      HLDDZ_Msg_GetBean_2x_30: 1905117046
+      HLDDZ_Msg_GetBean_2x_2: 692089333
+      HLDDZ_Msg_GetBean_2x_24: -1808720087
+      HLDDZ_Msg_GetBean_2x_23: -193296240
+      HLDDZ_Msg_GetBean_2x_10: -265866422
+      HLDDZ_Msg_GetBean_2x_5: -1081357922
+      HLDDZ_Msg_GetBean_2x_26: -150951419
+      HLDDZ_Msg_GetBean_2x_12: 1418466296
+      HLDDZ_Msg_GetBean_2x_11: -418419690
+      HLDDZ_Msg_GetBean_2x_16: 1161811768
+      HLDDZ_Msg_GetBean_2x_19: -400229178
+      HLDDZ_Msg_GetBean_2x_21: 864499658
+      HLDDZ_Msg_GetBean_2x_4: 2021293031
+      HLDDZ_Msg_GetBean_2x_8: 198532221
+      HLDDZ_Msg_GetBean_2x_33: 996260401
+      HLDDZ_Msg_GetBean_2x_9: -70050353
+      HLDDZ_Msg_GetBean_2x_15: -1997943228
+      HLDDZ_Msg_GetBean_2x_3: 1076631787
+      HLDDZ_Msg_GetBean_2x_7: -1897734520
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

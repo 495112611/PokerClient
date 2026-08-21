@@ -1,0 +1,1522 @@
+fileFormatVersion: 2
+guid: cd608751e1cc65447942d47214e6e8c2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 766
+        width: 44
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c5b035a67eab4d44bc461bf7f883d70
+      internalID: -588489788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 938
+        width: 124
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590c12f8e11ef1244b18fc03f9b18f25
+      internalID: -501200748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_2
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 971
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b6623a3ef809045944b23d116fc7b9
+      internalID: -595840667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_3
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 972
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591cbdeb76808b34caead56ed025dd0f
+      internalID: 1445046567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_4
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 974
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b129741d138d0ca4296cc20432071005
+      internalID: 1623550615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_5
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 948
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0674e5807cca34aac898eb8ec7851d
+      internalID: -2146982577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_6
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 948
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a4ab0ee210e4b408eeece7315aa039
+      internalID: -1158645959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_7
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 838
+        width: 165
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d391263c55d4a64dbf6d72dc396cb61
+      internalID: 461238855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_8
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 908
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06cfa3469cde503418e2594bd7764b81
+      internalID: 1400785529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_9
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 997
+        width: 85
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50d7fe55a75c84419f9938cad2b3f4f
+      internalID: 708504185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_10
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 916
+        width: 135
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23fe60d7a8049c4e826d54d3bc97096
+      internalID: 1442389249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_11
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 852
+        width: 124
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aae7aedb4a7fb74183de6fa860b2c55
+      internalID: 654409813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_12
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 920
+        width: 45
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab048b80844f8e14b8881371b1811bce
+      internalID: -384985922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_13
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 920
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4542342b9328ce04bb07fd88f0438e0d
+      internalID: 2013773045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_14
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 922
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae8aef4d22ccd64eafde405f9a353d0
+      internalID: -821863121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_15
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 868
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541b0ebc304f6d24f84f58baaf7ee00f
+      internalID: 1823318507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_16
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 868
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7405e4ea5584e1f4fa6615d5fc07814a
+      internalID: -560862518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_17
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 918
+        width: 155
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155046d7de808d04489bbaf6f5ab2003
+      internalID: 1347305723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_18
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 859
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc34f3e587805c43951587a2574f43f
+      internalID: -1435512176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_19
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 859
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8519b02b9a92b094abbe7b8876e7af5e
+      internalID: -1741508708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_20
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 802
+        width: 27
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c578a1954cfa442b8b3f8dfcf8255f
+      internalID: 1445209858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_21
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 811
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75c2957a5c992645bc66430fbc2d2d5
+      internalID: 499447952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_22
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 811
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c94360af30adc46a9bacdc4d3fb007
+      internalID: 1083904157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_23
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 836
+        width: 57
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f81aecae29dfc2468e025eafd92e9d1
+      internalID: 802180929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_24
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 839
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e60707e0c2f1645887946382cdef70
+      internalID: 617793327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_25
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 837
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8314240c540a8354c8a656fb10f6ccd6
+      internalID: 2026194160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_26
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 834
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cecce59a2492b24fbe12d38f9de8556
+      internalID: -1499435650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_27
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 833
+        width: 72
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63341fad29f4a7942b235b3ee6b273fd
+      internalID: -522445736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_28
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 766
+        width: 124
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85afb66a78e8d34dbc48c433b4bf5d4
+      internalID: -531192721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_29
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 806
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d5d8c3130787fc49adaee13c2ce985a
+      internalID: 985994406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_30
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 806
+        width: 45
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee334eeb9e109044ba829dcfbaab87d2
+      internalID: -764023725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_31
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 781
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2d2d0517d94df4b9646e14f1720f74
+      internalID: -2001264559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_32
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 782
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834173e76c6fbe546a67939f48f5aae1
+      internalID: -1193131484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_33
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 775
+        width: 69
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebc0373350814b41b8c4bff8ad7b04a
+      internalID: -2037892775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_34
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 753
+        width: 89
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2009d9e102b3e449e213e3216a8880
+      internalID: 378778078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_35
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 757
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd836c64649efab4dbeab3e29e47d79e
+      internalID: -1243192518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_36
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 757
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5196f60642c3d4489152b354db2a664
+      internalID: -1797814213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_37
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 757
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3821c4d9865348d4aa2c4f1f7abd9762
+      internalID: 746376242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_38
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 757
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3dc65baef01434293e3fe69ef6dc6c
+      internalID: 348179597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 230
+        width: 618
+        height: 451
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528ca484c5aec1b4b8d4eeeca3002561
+      internalID: 1298873296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_40
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 725
+        width: 80
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f6e5778e92b0c44a699341c8f1e34c
+      internalID: -1333036974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_41
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 725
+        width: 80
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817849e5f2bbcd34ca5d1beeb3d6a59a
+      internalID: 1971321056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_42
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 725
+        width: 80
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9392005232bb9cd45a3d4d6b963442f8
+      internalID: 1723221190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_43
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 725
+        width: 80
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953bb99d80c9a144dac199079dbc35ad
+      internalID: -2059795859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_44
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 731
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d2c7c89b1c3e24799013fee55067cb
+      internalID: -423518843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_45
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 666
+        width: 128
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10c6518b5f48d546b39163a282e3749
+      internalID: -206006053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_46
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 666
+        width: 128
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c32efa25aba49a42808f815ff09e635
+      internalID: -1444541535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_47
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 710
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b678d69c2bc0ce042b99ddecd87c76ab
+      internalID: -416854270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_48
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 683
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238f9a42095b6c849b9fee4bd4c95eac
+      internalID: 2030052642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_49
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 664
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57056deb00dc6af45b4bee1136430449
+      internalID: 403221899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_50
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 631
+        width: 59
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63795d1f09bdb514bbcef1cd7e0a8134
+      internalID: -373505170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_51
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 545
+        width: 66
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1fdb2457d6ae344bf3ba76075f8e06
+      internalID: -771444402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_52
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 660
+        width: 268
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4091e471901efa34fbc2e99f084cead2
+      internalID: 792081006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_53
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 529
+        width: 271
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9838a803a34ccba43a1c164095a4a95a
+      internalID: -1412536327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_54
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 460
+        width: 222
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779ee9a81b40244488f166bf608d4fea
+      internalID: -359628236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_55
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 593
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aad4aab39660a847ad04778e17b5841
+      internalID: -1733158979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_56
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 427
+        width: 355
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9280a7aae9e5d349bc14c30eafe5567
+      internalID: 211910053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 608
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1151b2fc78483429697a4523da1d85
+      internalID: 1362450782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_58
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 114
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9416ffb938926434d927128f4e0b4b45
+      internalID: 1442141987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_59
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 113
+        width: 64
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772502fda14ead343a9da2112c223d92
+      internalID: -117445468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_60
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 113
+        width: 64
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b6dd6be06d4d44a9cd179966130ffb
+      internalID: -2076657982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HLDDZ_Common_2x_61
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 0
+        width: 328
+        height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc1364a32f23394c9ad8de9fcf0b0c7
+      internalID: -2046702520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HLDDZ_Common_2x_20: 1445209858
+      HLDDZ_Common_2x_22: 1083904157
+      HLDDZ_Common_2x_38: 348179597
+      HLDDZ_Common_2x_44: -423518843
+      HLDDZ_Common_2x_54: -359628236
+      HLDDZ_Common_2x_18: -1435512176
+      HLDDZ_Common_2x_59: -117445468
+      HLDDZ_Common_2x_21: 499447952
+      HLDDZ_Common_2x_35: -1243192518
+      HLDDZ_Common_2x_27: -522445736
+      HLDDZ_Common_2x_41: 1971321056
+      HLDDZ_Common_2x_61: -2046702520
+      HLDDZ_Common_2x_9: 708504185
+      HLDDZ_Common_2x_15: 1823318507
+      HLDDZ_Common_2x_58: 1442141987
+      HLDDZ_Common_2x_12: -384985922
+      HLDDZ_Common_2x_11: 654409813
+      HLDDZ_Common_2x_0: -588489788
+      HLDDZ_Common_2x_47: -416854270
+      HLDDZ_Common_2x_5: -2146982577
+      HLDDZ_Common_2x_13: 2013773045
+      HLDDZ_Common_2x_25: 2026194160
+      HLDDZ_Common_2x_40: -1333036974
+      HLDDZ_Common_2x_46: -1444541535
+      HLDDZ_Common_2x_57: 1362450782
+      HLDDZ_Common_2x_31: -2001264559
+      HLDDZ_Common_2x_56: 211910053
+      HLDDZ_Common_2x_6: -1158645959
+      HLDDZ_Common_2x_7: 461238855
+      HLDDZ_Common_2x_19: -1741508708
+      HLDDZ_Common_2x_24: 617793327
+      HLDDZ_Common_2x_4: 1623550615
+      HLDDZ_Common_2x_17: 1347305723
+      HLDDZ_Common_2x_48: 2030052642
+      HLDDZ_Common_2x_39: 1298873296
+      HLDDZ_Common_2x_30: -764023725
+      HLDDZ_Common_2x_49: 403221899
+      HLDDZ_Common_2x_14: -821863121
+      HLDDZ_Common_2x_16: -560862518
+      HLDDZ_Common_2x_28: -531192721
+      HLDDZ_Common_2x_34: 378778078
+      HLDDZ_Common_2x_55: -1733158979
+      HLDDZ_Common_2x_43: -2059795859
+      HLDDZ_Common_2x_42: 1723221190
+      HLDDZ_Common_2x_32: -1193131484
+      HLDDZ_Common_2x_29: 985994406
+      HLDDZ_Common_2x_45: -206006053
+      HLDDZ_Common_2x_26: -1499435650
+      HLDDZ_Common_2x_36: -1797814213
+      HLDDZ_Common_2x_37: 746376242
+      HLDDZ_Common_2x_53: -1412536327
+      HLDDZ_Common_2x_8: 1400785529
+      HLDDZ_Common_2x_50: -373505170
+      HLDDZ_Common_2x_3: 1445046567
+      HLDDZ_Common_2x_51: -771444402
+      HLDDZ_Common_2x_33: -2037892775
+      HLDDZ_Common_2x_23: 802180929
+      HLDDZ_Common_2x_1: -501200748
+      HLDDZ_Common_2x_2: -595840667
+      HLDDZ_Common_2x_10: 1442389249
+      HLDDZ_Common_2x_52: 792081006
+      HLDDZ_Common_2x_60: -2076657982
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
