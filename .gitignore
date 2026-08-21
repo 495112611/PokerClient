@@ -1,0 +1,15 @@
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Ss]earch/
+/[Ss]tateCache/
+/[Ss]haderCache/
+/[Pp]ackageManager/
+*.csproj
+*.sln
+*.user
+*.suo
