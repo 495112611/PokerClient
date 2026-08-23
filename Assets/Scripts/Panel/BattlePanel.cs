@@ -33,7 +33,7 @@ public class BattlePanel : BasePanel
         notRobButton = skin.transform.Find("NotRobButton").GetComponent<Button>();
         playButton = skin.transform.Find("PlayButton").GetComponent<Button>();
         notPlayButton = skin.transform.Find("NotPlayButton").GetComponent<Button>();
-       
+
 
         GameManager.leftObj = skin.transform.Find("LeftPlayer/GameObject").gameObject;
         GameManager.rightObj = skin.transform.Find("RightPlayer/GameObject").gameObject;
@@ -57,6 +57,7 @@ public class BattlePanel : BasePanel
         NetManager.AddMsgListener("MsgReStart", OnMsgReStart);
         NetManager.AddMsgListener("MsgStartRob", OnMsgStartRob);
         NetManager.AddMsgListener("MsgRob", OnMsgRob);
+        NetManager.AddMsgListener("MsgPlayCards", OnMsgPlayCards);
 
         //��ť�¼�
         callButton.onClick.AddListener(OnCallClick);
@@ -85,6 +86,8 @@ public class BattlePanel : BasePanel
         NetManager.RemoveMsgListener("MsgReStart", OnMsgReStart);
         NetManager.RemoveMsgListener("MsgStartRob", OnMsgStartRob);
         NetManager.RemoveMsgListener("MsgRob", OnMsgRob);
+        NetManager.RemoveMsgListener("MsgPlayCards", OnMsgPlayCards);
+
     }
     public void OnMsgGetCardList(MsgBase msgBase)
     {
@@ -193,11 +196,14 @@ public class BattlePanel : BasePanel
     }
     public void OnPlayClick()
     {
-        
+        MsgPlayCards MsgPlayCards = new MsgPlayCards();
+        MsgPlayCards.play = true;
+        MsgPlayCards.cards = CardManager.GetCardInfos(GameManager.selectCard.ToArray());
+        NetManager.Send(MsgPlayCards);
     }
     public void OnNotPlayClick()
     {
-       
+
     }
     public void OnMsgSwitchTurn(MsgBase msgBase)
     {
@@ -372,14 +378,14 @@ public class BattlePanel : BasePanel
 
         if (msg.rob)
         {
-            
+
 
             GameManager.SyncDestroy(msg.id);
             GameManager.SyncGenerate(msg.id, "Word/Rob");
         }
         else
         {
-            
+
 
             GameManager.SyncDestroy(msg.id);
             GameManager.SyncGenerate(msg.id, "Word/NotRob");
@@ -426,5 +432,11 @@ public class BattlePanel : BasePanel
 
             GameManager.cards.Add(cards[i]);
         }
+    }
+
+    public void OnMsgPlayCards(MsgBase msgBase)
+    {
+        MsgPlayCards msg = msgBase as MsgPlayCards;
+        Debug.Log((CardManager.CardType)msg.cardType);
     }
 }

@@ -8,6 +8,26 @@ using System.Threading.Tasks;
 public class CardManager
 {
     /// <summary>
+    /// 卡牌类型
+    /// </summary>
+    public enum CardType
+    {
+        one,//单张
+        two,//对子
+        three,//三张
+        threeWithOne,//三代一
+        threeWithTwo,//三带二
+        airplane,//飞机
+        airplaneWithOne,//飞机带一
+        airplaneWithTwo,//飞机带二
+        chain,//顺子
+        pairChain,//连对
+        bomb,//炸弹
+        fourWithTwo,//四带二
+        jokerBomb,//王炸
+        wrong //错误类型
+    }
+    /// <summary>
     /// 卡牌字典
     /// </summary>
     public static Dictionary<string, Card> nameCards = new Dictionary<string, Card>();
@@ -38,7 +58,7 @@ public class CardManager
     }
     public static Card GetCard(string name)
     {
-        if(nameCards.ContainsKey(name))
+        if (nameCards.ContainsKey(name))
             return nameCards[name];
         return null;
     }/// <summary>
