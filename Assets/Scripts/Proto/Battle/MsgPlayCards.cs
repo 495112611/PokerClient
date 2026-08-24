@@ -12,4 +12,6 @@ public class MsgPlayCards : MsgBase
     public bool play;
     public CardInfo[] cards = new CardInfo[20];
     public int cardType;
+     public bool result;
+    public bool canNotPlay = true;
 }

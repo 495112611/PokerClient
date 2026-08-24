@@ -437,6 +437,59 @@ public class BattlePanel : BasePanel
     public void OnMsgPlayCards(MsgBase msgBase)
     {
         MsgPlayCards msg = msgBase as MsgPlayCards;
-        Debug.Log((CardManager.CardType)msg.cardType);
+        GameManager.canNotPlay = msg.canNotPlay;
+
+        if (msg.result)
+        {
+            if (msg.play)
+            {
+                Card[] cards = CardManager.GetCards(msg.cards);
+                Array.Sort(cards, (Card card1, Card card2) => ((int)card1.rank - (int)card2.rank));
+                GameManager.SyncDestroy(msg.id);
+                for (int i = 0; i < cards.Length; i++)
+                {
+                    GameManager.SyncGenerateCard(msg.id, CardManager.GetName(cards[i]));
+                }
+            }
+            else
+            {
+                GameManager.SyncDestroy(msg.id);
+                GameManager.SyncGenerate(msg.id, "Word/NotPlay");
+            }
+        }
+        //处理当前的客户端
+        if (GameManager.id != msg.id)
+            return;
+
+        if (msg.result)
+        {
+            if (msg.play)
+            {
+                Card[] cards = CardManager.GetCards(msg.cards);
+                Array.Sort(cards, (Card card1, Card card2) => ((int)card1.rank - (int)card2.rank));
+                Debug.Log("cards.Length..." + cards.Length);
+                //删除客户端手牌
+                for (int i = 0; i < cards.Length; i++)
+                {
+                    for (int j = GameManager.cards.Count - 1; j < 0; j--)
+                    {
+                        if (GameManager.cards[j].Equals(cards[i]))
+                        {
+                            GameManager.cards.RemoveAt(j);
+                        }
+                    }
+                    for (int j = GameManager.cards.Count - 1; j < 0; j--)
+                    {
+                        if (GameManager.selectCard[j].Equals(cards[i]))
+                        {
+                            GameManager.selectCard.RemoveAt(j);
+                        }
+                    }
+                }
+                GenerateCard(GameManager.cards.ToArray());
+            }
+        }
+        MsgSwitchTurn msgSwitchTurn = new MsgSwitchTurn();
+        NetManager.Send(msgSwitchTurn);
     }
 }
