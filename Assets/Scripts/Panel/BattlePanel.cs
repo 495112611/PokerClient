@@ -7,17 +7,18 @@ using UnityEngine.UI;
 public class BattlePanel : BasePanel
 {
     /// <summary>
-    /// �����Ϸ����
+    /// 玩家游戏物体
     /// </summary>
     private GameObject playerObj;
-    //��ť
+    //按钮
     private Button callButton;
     private Button notCallButton;
     private Button robButton;
     private Button notRobButton;
     private Button playButton;
     private Button notPlayButton;
-
+    private Text winText;
+    private AudioSource audio;
     public override void OnInit()
     {
         skinPath = "BattlePanel";
@@ -25,7 +26,7 @@ public class BattlePanel : BasePanel
     }
     public override void OnShow(params object[] para)
     {
-        //Ѱ�����
+        //寻找组件
         playerObj = skin.transform.Find("Player").gameObject;
         callButton = skin.transform.Find("CallButton").GetComponent<Button>();
         notCallButton = skin.transform.Find("NotCallButton").GetComponent<Button>();
@@ -33,7 +34,8 @@ public class BattlePanel : BasePanel
         notRobButton = skin.transform.Find("NotRobButton").GetComponent<Button>();
         playButton = skin.transform.Find("PlayButton").GetComponent<Button>();
         notPlayButton = skin.transform.Find("NotPlayButton").GetComponent<Button>();
-
+        winText= skin.transform.Find("WinPanel/WinText").GetComponent<Text>();
+        audio= skin.transform.Find("AudioSource").GetComponent<AudioSource>();
 
         GameManager.leftObj = skin.transform.Find("LeftPlayer/GameObject").gameObject;
         GameManager.rightObj = skin.transform.Find("RightPlayer/GameObject").gameObject;
@@ -48,7 +50,7 @@ public class BattlePanel : BasePanel
         playButton.gameObject.SetActive(false);
         notPlayButton.gameObject.SetActive(false);
 
-        //���������¼�
+        //监听网络事件
         NetManager.AddMsgListener("MsgGetCardList", OnMsgGetCardList);
         NetManager.AddMsgListener("MsgGetStartPlayer", OnMsgGetStartPlayer);
         NetManager.AddMsgListener("MsgSwitchTurn", OnMsgSwitchTurn);
@@ -59,7 +61,7 @@ public class BattlePanel : BasePanel
         NetManager.AddMsgListener("MsgRob", OnMsgRob);
         NetManager.AddMsgListener("MsgPlayCards", OnMsgPlayCards);
 
-        //��ť�¼�
+        //按钮事件
         callButton.onClick.AddListener(OnCallClick);
         notCallButton.onClick.AddListener(OnNotCallClick);
         robButton.onClick.AddListener(OnRobClick);
@@ -87,7 +89,6 @@ public class BattlePanel : BasePanel
         NetManager.RemoveMsgListener("MsgStartRob", OnMsgStartRob);
         NetManager.RemoveMsgListener("MsgRob", OnMsgRob);
         NetManager.RemoveMsgListener("MsgPlayCards", OnMsgPlayCards);
-
     }
     public void OnMsgGetCardList(MsgBase msgBase)
     {
@@ -105,11 +106,11 @@ public class BattlePanel : BasePanel
             GameManager.threeCards.Add(card);
         }
 
-        //���ɿ���
+        //生成卡牌
         GenerateCard(GameManager.cards.ToArray());
     }
     /// <summary>
-    /// ���ɿ���
+    /// 生成卡牌
     /// </summary>
     /// <param name="cards"></param>
     public void GenerateCard(Card[] cards)
@@ -134,7 +135,7 @@ public class BattlePanel : BasePanel
         CardSort();
     }
     /// <summary>
-    /// ����
+    /// 排序
     /// </summary>
     public void CardSort()
     {
@@ -196,14 +197,16 @@ public class BattlePanel : BasePanel
     }
     public void OnPlayClick()
     {
-        MsgPlayCards MsgPlayCards = new MsgPlayCards();
-        MsgPlayCards.play = true;
-        MsgPlayCards.cards = CardManager.GetCardInfos(GameManager.selectCard.ToArray());
-        NetManager.Send(MsgPlayCards);
+        MsgPlayCards msgPlayCards = new MsgPlayCards();
+        msgPlayCards.play = true;
+        msgPlayCards.cards = CardManager.GetCardInfos(GameManager.selectCard.ToArray());
+        NetManager.Send(msgPlayCards);
     }
     public void OnNotPlayClick()
     {
-
+        MsgPlayCards msgPlayCards = new MsgPlayCards();
+        msgPlayCards.play = false;
+        NetManager.Send(msgPlayCards);
     }
     public void OnMsgSwitchTurn(MsgBase msgBase)
     {
@@ -286,7 +289,7 @@ public class BattlePanel : BasePanel
             GameManager.SyncDestroy(msg.id);
             GameManager.SyncGenerate(msg.id, "Word/NotCall");
         }
-        //����������
+        //地主出来了
         if (msg.result == 3)
         {
             SyncLandLord(msg.id);
@@ -301,17 +304,17 @@ public class BattlePanel : BasePanel
             case 0:
                 break;
             case 1:
-                //������
+                //抢地主
                 MsgStartRob msgStartRob = new MsgStartRob();
                 NetManager.Send(msgStartRob);
                 break;
             case 2:
-                //����ϴ��
+                //重新洗牌
                 MsgReStart msgReStart = new MsgReStart();
                 NetManager.Send(msgReStart);
                 break;
             case 3:
-                //�Լ��ǵ���
+                //自己是地主
                 TurnLandLord();
                 msgSwitchTurn.round = 0;
                 break;
@@ -319,7 +322,7 @@ public class BattlePanel : BasePanel
         NetManager.Send(msgSwitchTurn);
     }
     /// <summary>
-    /// ��ɵ���
+    /// 变成地主
     /// </summary>
     public void TurnLandLord()
     {
@@ -378,14 +381,21 @@ public class BattlePanel : BasePanel
 
         if (msg.rob)
         {
-
+            //音乐
+            string audioPath = "Sounds/Man_Rob";
+            audioPath = audioPath + UnityEngine.Random.Range(1, 4);
+            audio.clip = Resources.Load<AudioClip>(audioPath);
+            audio.Play();
 
             GameManager.SyncDestroy(msg.id);
             GameManager.SyncGenerate(msg.id, "Word/Rob");
         }
         else
         {
-
+            //音乐
+            string audioPath = "Sounds/Man_NoRob";
+            audio.clip = Resources.Load<AudioClip>(audioPath);
+            audio.Play();
 
             GameManager.SyncDestroy(msg.id);
             GameManager.SyncGenerate(msg.id, "Word/NotRob");
@@ -393,7 +403,7 @@ public class BattlePanel : BasePanel
 
         SyncLandLord(msg.landLord);
 
-        //����������
+        //地主出来了
         if (msg.landLord != "")
         {
             RevealCards(GameManager.threeCards.ToArray());
@@ -401,7 +411,7 @@ public class BattlePanel : BasePanel
             msgSwitchTurn.round = 0;
         }
 
-        //�Լ��ǵ���
+        //自己是地主
         if (msg.landLord == GameManager.id)
         {
             TurnLandLord();
@@ -419,7 +429,7 @@ public class BattlePanel : BasePanel
         NetManager.Send(msgSwitchTurn);
     }
     /// <summary>
-    /// ��ʾ����
+    /// 揭示底牌
     /// </summary>
     /// <param name="cards"></param>
     public void RevealCards(Card[] cards)
@@ -433,19 +443,47 @@ public class BattlePanel : BasePanel
             GameManager.cards.Add(cards[i]);
         }
     }
-
     public void OnMsgPlayCards(MsgBase msgBase)
     {
         MsgPlayCards msg = msgBase as MsgPlayCards;
         GameManager.canNotPlay = msg.canNotPlay;
+
+        if (msg.win == 2)
+        {
+            winText.transform.parent.gameObject.SetActive(true);
+            if (GameManager.isLandLord)
+            {
+                winText.text = "地主胜利";
+            }
+            else
+            {
+                winText.text = "农民失败";
+                winText.color = new(0.4f, 0.4f, 0.4f);
+            }
+        }
+        else if (msg.win == 1)
+        {
+            winText.transform.parent.gameObject.SetActive(true);
+            if (GameManager.isLandLord)
+            {
+                winText.text = "地主失败";
+                winText.color = new(0.4f, 0.4f, 0.4f);
+            }
+            else
+            {
+                winText.text = "农民胜利";
+            }
+        }
 
         if (msg.result)
         {
             if (msg.play)
             {
                 Card[] cards = CardManager.GetCards(msg.cards);
-                Array.Sort(cards, (Card card1, Card card2) => ((int)card1.rank - (int)card2.rank));
+                Array.Sort(cards, (Card card1, Card card2) => (int)card1.rank - (int)card2.rank);
                 GameManager.SyncDestroy(msg.id);
+                GameManager.SyncCardCount(msg.id, cards.Length);
+                //生成同步的卡牌
                 for (int i = 0; i < cards.Length; i++)
                 {
                     GameManager.SyncGenerateCard(msg.id, CardManager.GetName(cards[i]));
@@ -457,39 +495,35 @@ public class BattlePanel : BasePanel
                 GameManager.SyncGenerate(msg.id, "Word/NotPlay");
             }
         }
-        //处理当前的客户端
         if (GameManager.id != msg.id)
             return;
+
 
         if (msg.result)
         {
             if (msg.play)
             {
                 Card[] cards = CardManager.GetCards(msg.cards);
-                Array.Sort(cards, (Card card1, Card card2) => ((int)card1.rank - (int)card2.rank));
-                Debug.Log("cards.Length..." + cards.Length);
-                //删除客户端手牌
+                Array.Sort(cards, (Card card1, Card card2) => (int)card1.rank - (int)card2.rank);
+
+                //删除客户端储存的牌
                 for (int i = 0; i < cards.Length; i++)
                 {
-                    for (int j = GameManager.cards.Count - 1; j < 0; j--)
+                    for (int j = GameManager.cards.Count - 1; j >= 0; j--)
                     {
                         if (GameManager.cards[j].Equals(cards[i]))
-                        {
                             GameManager.cards.RemoveAt(j);
-                        }
                     }
-                    for (int j = GameManager.cards.Count - 1; j < 0; j--)
+                    for (int j = GameManager.selectCard.Count - 1; j >= 0; j--)
                     {
                         if (GameManager.selectCard[j].Equals(cards[i]))
-                        {
                             GameManager.selectCard.RemoveAt(j);
-                        }
                     }
                 }
                 GenerateCard(GameManager.cards.ToArray());
             }
+            MsgSwitchTurn msgSwitchTurn = new MsgSwitchTurn();
+            NetManager.Send(msgSwitchTurn);
         }
-        MsgSwitchTurn msgSwitchTurn = new MsgSwitchTurn();
-        NetManager.Send(msgSwitchTurn);
     }
 }
