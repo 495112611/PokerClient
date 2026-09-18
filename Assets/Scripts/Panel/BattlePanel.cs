@@ -295,6 +295,7 @@ public class BattlePanel : BasePanel
             SyncLandLord(msg.id);
             RevealCards(GameManager.threeCards.ToArray());
             GameManager.status = PlayerStatus.play;
+            GameManager.canNotPlay = false;
         }
 
         if (msg.id != GameManager.id)
@@ -408,13 +409,18 @@ public class BattlePanel : BasePanel
         {
             RevealCards(GameManager.threeCards.ToArray());
             GameManager.status = PlayerStatus.play;
+            GameManager.canNotPlay = false;
             msgSwitchTurn.round = 0;
-        }
 
-        //自己是地主
-        if (msg.landLord == GameManager.id)
-        {
-            TurnLandLord();
+            if (msg.landLord == GameManager.id)
+            {
+                TurnLandLord();
+            }
+
+            // 地主确定后只请求首轮同步，不再执行抢地主的跳人逻辑。
+            if (msg.id == GameManager.id)
+                NetManager.Send(msgSwitchTurn);
+            return;
         }
 
         if (msg.id != GameManager.id)
