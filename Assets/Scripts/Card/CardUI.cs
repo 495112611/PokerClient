@@ -30,7 +30,18 @@ public class CardUI : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
         }
     }
 
-    private void Start()
+    public void ClearSelection()
+    {
+        IsSelect = false;
+        if (isUp)
+        {
+            transform.position -= Vector3.up * 6;
+            isUp = false;
+        }
+        GameManager.selectCard.Remove(card);
+    }
+
+    private void Awake()
     {
         card = CardManager.GetCard(gameObject.name);
         image = GetComponent<Image>();
@@ -66,6 +77,8 @@ public class CardUI : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
     }
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (eventData.button != PointerEventData.InputButton.Left)
+            return;
         GameManager.isPressing = true;
         if (IsSelect)
         {

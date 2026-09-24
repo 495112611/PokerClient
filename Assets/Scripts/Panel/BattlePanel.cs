@@ -19,6 +19,10 @@ public class BattlePanel : BasePanel
     private Button notPlayButton;
     private Text winText;
     private AudioSource audio;
+    private TurnTimerView timerView;
+    private MsgTurnState lastTurnState;
+    private long currentTurnId;
+    private bool timerActive;
     public override void OnInit()
     {
         skinPath = "BattlePanel";
@@ -36,6 +40,18 @@ public class BattlePanel : BasePanel
         notPlayButton = skin.transform.Find("NotPlayButton").GetComponent<Button>();
         winText= skin.transform.Find("WinPanel/WinText").GetComponent<Text>();
         audio= skin.transform.Find("AudioSource").GetComponent<AudioSource>();
+        CreateTimerUI();
+        // 挂在面板根节点，覆盖两张背景图和其他非交互空白区域。
+        skin.AddComponent<BlankClickCatcher>().panel = this;
+        currentTurnId = 0;
+        timerActive = false;
+        GameManager.status = PlayerStatus.call;
+        GameManager.isLandLord = false;
+        GameManager.canNotPlay = false;
+        GameManager.isPressing = false;
+        GameManager.cards.Clear();
+        GameManager.threeCards.Clear();
+        GameManager.selectCard.Clear();
 
         GameManager.leftObj = skin.transform.Find("LeftPlayer/GameObject").gameObject;
         GameManager.rightObj = skin.transform.Find("RightPlayer/GameObject").gameObject;
@@ -43,12 +59,7 @@ public class BattlePanel : BasePanel
         GameManager.threeCardsObj = skin.transform.Find("ThreeCards").gameObject;
 
 
-        callButton.gameObject.SetActive(false);
-        notRobButton.gameObject.SetActive(false);
-        robButton.gameObject.SetActive(false);
-        notRobButton.gameObject.SetActive(false);
-        playButton.gameObject.SetActive(false);
-        notPlayButton.gameObject.SetActive(false);
+        HideActionButtons();
 
         //监听网络事件
         NetManager.AddMsgListener("MsgGetCardList", OnMsgGetCardList);
@@ -60,6 +71,7 @@ public class BattlePanel : BasePanel
         NetManager.AddMsgListener("MsgStartRob", OnMsgStartRob);
         NetManager.AddMsgListener("MsgRob", OnMsgRob);
         NetManager.AddMsgListener("MsgPlayCards", OnMsgPlayCards);
+        NetManager.AddMsgListener("MsgTurnState", OnMsgTurnState);
 
         //按钮事件
         callButton.onClick.AddListener(OnCallClick);
@@ -89,11 +101,96 @@ public class BattlePanel : BasePanel
         NetManager.RemoveMsgListener("MsgStartRob", OnMsgStartRob);
         NetManager.RemoveMsgListener("MsgRob", OnMsgRob);
         NetManager.RemoveMsgListener("MsgPlayCards", OnMsgPlayCards);
+        NetManager.RemoveMsgListener("MsgTurnState", OnMsgTurnState);
+        GameManager.selectCard.Clear();
+        GameManager.isPressing = false;
+        timerActive = false;
     }
+
+    private void CreateTimerUI()
+    {
+        GameObject go = new GameObject("TurnTimer", typeof(RectTransform), typeof(TurnTimerView));
+        go.transform.SetParent(skin.transform, false);
+        timerView = go.GetComponent<TurnTimerView>();
+        timerView.Initialize(winText.font);
+    }
+
+    public void ClearSelectedCards()
+    {
+        GameManager.isPressing = false;
+        if (playerObj == null)
+            return;
+        Transform cards = playerObj.transform.Find("Cards");
+        if (cards != null)
+        {
+            for (int i = 0; i < cards.childCount; i++)
+                cards.GetChild(i).GetComponent<CardUI>()?.ClearSelection();
+        }
+        GameManager.selectCard.Clear();
+    }
+
+    public void OnMsgTurnState(MsgBase msgBase)
+    {
+        MsgTurnState msg = msgBase as MsgTurnState;
+        if (msg == null || msg.turnId < currentTurnId)
+            return;
+        bool turnChanged = lastTurnState == null || msg.turnId != currentTurnId ||
+            msg.active != lastTurnState.active || msg.id != lastTurnState.id ||
+            msg.phase != lastTurnState.phase || msg.canNotPlay != lastTurnState.canNotPlay;
+        currentTurnId = msg.turnId;
+        lastTurnState = msg;
+        timerActive = msg.active;
+        timerView.Show(msg);
+        if (msg.phase >= 0 && msg.phase <= 2)
+            GameManager.status = (PlayerStatus)msg.phase;
+        GameManager.canNotPlay = msg.canNotPlay;
+        // 每秒的数字刷新不反复隐藏按钮，避免打断正在进行的点击。
+        if (turnChanged)
+            ApplyTurnButtons(msg.id);
+        if (!msg.active)
+            ClearSelectedCards();
+    }
+
+    private void ApplyTurnButtons(string activeId)
+    {
+        HideActionButtons();
+        if (!timerActive || activeId != GameManager.id)
+            return;
+        switch (GameManager.status)
+        {
+            case PlayerStatus.call:
+                callButton.gameObject.SetActive(true);
+                notCallButton.gameObject.SetActive(true);
+                break;
+            case PlayerStatus.rob:
+                robButton.gameObject.SetActive(true);
+                notRobButton.gameObject.SetActive(true);
+                break;
+            case PlayerStatus.play:
+                playButton.gameObject.SetActive(true);
+                notPlayButton.gameObject.SetActive(true);
+                notPlayButton.enabled = GameManager.canNotPlay;
+                notPlayButton.GetComponent<Image>().color = new Color(1, 1, 1, GameManager.canNotPlay ? 1 : 0.6f);
+                break;
+        }
+    }
+    private void HideActionButtons()
+    {
+        callButton.gameObject.SetActive(false);
+        notCallButton.gameObject.SetActive(false);
+        robButton.gameObject.SetActive(false);
+        notRobButton.gameObject.SetActive(false);
+        playButton.gameObject.SetActive(false);
+        notPlayButton.gameObject.SetActive(false);
+    }
+
     public void OnMsgGetCardList(MsgBase msgBase)
     {
         MsgGetCardList msg = msgBase as MsgGetCardList;
-        for (int i = 0; i < 17; i++)
+        GameManager.cards.Clear();
+        GameManager.threeCards.Clear();
+        GameManager.selectCard.Clear();
+        for (int i = 0; i < msg.cardInfos.Length; i++)
         {
             Card card = new Card(msg.cardInfos[i].suit, msg.cardInfos[i].rank);
             GameManager.cards.Add(card);
@@ -115,10 +212,14 @@ public class BattlePanel : BasePanel
     /// <param name="cards"></param>
     public void GenerateCard(Card[] cards)
     {
+        ClearSelectedCards();
         Transform cardTf = playerObj.transform.Find("Cards");
         for (int i = cardTf.childCount - 1; i >= 0; i--)
         {
-            Destroy(cardTf.GetChild(i).gameObject);
+            GameObject oldCard = cardTf.GetChild(i).gameObject;
+            oldCard.SetActive(false);
+            oldCard.transform.SetParent(null, false);
+            Destroy(oldCard);
         }
         for (int i = 0; i < cards.Length; i++)
         {
@@ -163,36 +264,35 @@ public class BattlePanel : BasePanel
     }
     public void OnMsgGetStartPlayer(MsgBase msgBase)
     {
-        MsgGetStartPlayer msg = msgBase as MsgGetStartPlayer;
-        if (GameManager.id == msg.id)
-        {
-            callButton.gameObject.SetActive(true);
-            notCallButton.gameObject.SetActive(true);
-        }
+        // 具体阶段、当前玩家和倒计时统一由 MsgTurnState 提供。
     }
 
     public void OnCallClick()
     {
         MsgCall msgCall = new MsgCall();
         msgCall.call = true;
+        msgCall.turnId = currentTurnId;
         NetManager.Send(msgCall);
     }
     public void OnNotCallClick()
     {
         MsgCall msgCall = new MsgCall();
         msgCall.call = false;
+        msgCall.turnId = currentTurnId;
         NetManager.Send(msgCall);
     }
     public void OnRobClick()
     {
         MsgRob msgRob = new MsgRob();
         msgRob.rob = true;
+        msgRob.turnId = currentTurnId;
         NetManager.Send(msgRob);
     }
     public void OnNotRobClick()
     {
         MsgRob msgRob = new MsgRob();
         msgRob.rob = false;
+        msgRob.turnId = currentTurnId;
         NetManager.Send(msgRob);
     }
     public void OnPlayClick()
@@ -200,85 +300,33 @@ public class BattlePanel : BasePanel
         MsgPlayCards msgPlayCards = new MsgPlayCards();
         msgPlayCards.play = true;
         msgPlayCards.cards = CardManager.GetCardInfos(GameManager.selectCard.ToArray());
+        msgPlayCards.turnId = currentTurnId;
         NetManager.Send(msgPlayCards);
     }
     public void OnNotPlayClick()
     {
         MsgPlayCards msgPlayCards = new MsgPlayCards();
         msgPlayCards.play = false;
+        msgPlayCards.turnId = currentTurnId;
         NetManager.Send(msgPlayCards);
     }
     public void OnMsgSwitchTurn(MsgBase msgBase)
     {
-        MsgSwitchTurn msg = msgBase as MsgSwitchTurn;
-        switch (GameManager.status)
-        {
-            case PlayerStatus.call:
-                if (msg.id == GameManager.id)
-                {
-                    callButton.gameObject.SetActive(true);
-                    notCallButton.gameObject.SetActive(true);
-                }
-                else
-                {
-                    callButton.gameObject.SetActive(false);
-                    notCallButton.gameObject.SetActive(false);
-                }
-                break;
-            case PlayerStatus.rob:
-                callButton.gameObject.SetActive(false);
-                notCallButton.gameObject.SetActive(false);
-                if (msg.id == GameManager.id)
-                {
-                    robButton.gameObject.SetActive(true);
-                    notRobButton.gameObject.SetActive(true);
-                }
-                else
-                {
-                    robButton.gameObject.SetActive(false);
-                    notRobButton.gameObject.SetActive(false);
-                }
-                break;
-            case PlayerStatus.play:
-                callButton.gameObject.SetActive(false);
-                notCallButton.gameObject.SetActive(false);
-                robButton.gameObject.SetActive(false);
-                notRobButton.gameObject.SetActive(false);
-                if (msg.id == GameManager.id)
-                {
-                    playButton.gameObject.SetActive(true);
-                    notPlayButton.gameObject.SetActive(true);
-                    if (GameManager.canNotPlay)
-                    {
-                        notPlayButton.GetComponent<Image>().color = new Color(1, 1, 1, 1);
-                        notPlayButton.enabled = true;
-                    }
-                    else
-                    {
-                        notPlayButton.GetComponent<Image>().color = new Color(1, 1, 1, 0.6f);
-                        notPlayButton.enabled = false;
-                    }
-                }
-                else
-                {
-                    playButton.gameObject.SetActive(false);
-                    notPlayButton.gameObject.SetActive(false);
-                }
-                break;
-            default:
-                break;
-        }
+        // 旧协议不再决定按钮状态，避免覆盖服务器的回合快照。
+        if (lastTurnState != null)
+            ApplyTurnButtons(lastTurnState.id);
     }
     public void OnMsgGetPlayer(MsgBase msgBase)
     {
         MsgGetPlayer msg = msgBase as MsgGetPlayer;
         GameManager.leftId = msg.leftId;
         GameManager.rightId = msg.rightId;
+        if (lastTurnState != null)
+            timerView.Show(lastTurnState);
     }
     public void OnMsgCall(MsgBase msgBase)
     {
         MsgCall msg = msgBase as MsgCall;
-        MsgSwitchTurn msgSwitchTurn = new MsgSwitchTurn();
         if (msg.call)
         {
             GameManager.SyncDestroy(msg.id);
@@ -296,31 +344,11 @@ public class BattlePanel : BasePanel
             RevealCards(GameManager.threeCards.ToArray());
             GameManager.status = PlayerStatus.play;
             GameManager.canNotPlay = false;
+            if (msg.id == GameManager.id)
+                TurnLandLord();
         }
 
-        if (msg.id != GameManager.id)
-            return;
-        switch (msg.result)
-        {
-            case 0:
-                break;
-            case 1:
-                //抢地主
-                MsgStartRob msgStartRob = new MsgStartRob();
-                NetManager.Send(msgStartRob);
-                break;
-            case 2:
-                //重新洗牌
-                MsgReStart msgReStart = new MsgReStart();
-                NetManager.Send(msgReStart);
-                break;
-            case 3:
-                //自己是地主
-                TurnLandLord();
-                msgSwitchTurn.round = 0;
-                break;
-        }
-        NetManager.Send(msgSwitchTurn);
+        // 下一阶段和下一位玩家由服务器通过 MsgTurnState 广播。
     }
     /// <summary>
     /// 变成地主
@@ -336,6 +364,8 @@ public class BattlePanel : BasePanel
         Array.Copy(GameManager.cards.ToArray(), 0, cards, 0, 17);
         Array.Copy(GameManager.threeCards.ToArray(), 0, cards, 17, 3);
 
+        GameManager.cards.Clear();
+        GameManager.cards.AddRange(cards);
         GenerateCard(cards);
     }
 
@@ -359,16 +389,19 @@ public class BattlePanel : BasePanel
 
     public void OnMsgReStart(MsgBase msgBase)
     {
-        MsgReStart msg = msgBase as MsgReStart;
-        Transform cardsTra = playerObj.transform.Find("Cards");
-        for (int i = cardsTra.childCount - 1; i >= 0; i--)
-        {
-            Destroy(cardsTra.GetChild(i).gameObject);
-        }
+        ClearSelectedCards();
         GameManager.cards.Clear();
         GameManager.threeCards.Clear();
-        MsgGetCardList msgGetCardList = new MsgGetCardList();
-        NetManager.Send(msgGetCardList);
+        GameManager.status = PlayerStatus.call;
+        GameManager.isLandLord = false;
+        GameManager.canNotPlay = false;
+        GameManager.SyncDestroy(GameManager.id);
+        GameManager.SyncDestroy(GameManager.leftId);
+        GameManager.SyncDestroy(GameManager.rightId);
+        timerActive = false;
+        timerView.gameObject.SetActive(false);
+        HideActionButtons();
+        // 新手牌由服务器主动发送 MsgGetCardList。
     }
     public void OnMsgStartRob(MsgBase msgBase)
     {
@@ -378,8 +411,6 @@ public class BattlePanel : BasePanel
     public void OnMsgRob(MsgBase msgBase)
     {
         MsgRob msg = msgBase as MsgRob;
-        MsgSwitchTurn msgSwitchTurn = new MsgSwitchTurn();
-
         if (msg.rob)
         {
             //音乐
@@ -410,29 +441,15 @@ public class BattlePanel : BasePanel
             RevealCards(GameManager.threeCards.ToArray());
             GameManager.status = PlayerStatus.play;
             GameManager.canNotPlay = false;
-            msgSwitchTurn.round = 0;
-
             if (msg.landLord == GameManager.id)
             {
                 TurnLandLord();
             }
 
-            // 地主确定后只请求首轮同步，不再执行抢地主的跳人逻辑。
-            if (msg.id == GameManager.id)
-                NetManager.Send(msgSwitchTurn);
             return;
         }
 
-        if (msg.id != GameManager.id)
-            return;
-
-        if (!msg.needRob)
-        {
-            msgSwitchTurn.round = 2;
-            NetManager.Send(msgSwitchTurn);
-            return;
-        }
-        NetManager.Send(msgSwitchTurn);
+        // 抢地主后的轮换由服务器处理，客户端不再发送 round。
     }
     /// <summary>
     /// 揭示底牌
@@ -446,7 +463,6 @@ public class BattlePanel : BasePanel
             Sprite sprite = Resources.Load<Sprite>("Card/" + name);
             GameManager.threeCardsObj.transform.GetChild(i).GetComponent<Image>().sprite = sprite;
 
-            GameManager.cards.Add(cards[i]);
         }
     }
     public void OnMsgPlayCards(MsgBase msgBase)
@@ -528,8 +544,8 @@ public class BattlePanel : BasePanel
                 }
                 GenerateCard(GameManager.cards.ToArray());
             }
-            MsgSwitchTurn msgSwitchTurn = new MsgSwitchTurn();
-            NetManager.Send(msgSwitchTurn);
+            ClearSelectedCards();
+            // 下一位和新的倒计时由服务器广播 MsgTurnState。
         }
     }
 }

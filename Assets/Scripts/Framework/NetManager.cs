@@ -321,7 +321,7 @@ public static class NetManager
             lock (writeQueue)
             {
                 writeQueue.Dequeue();
-                ba = writeQueue.First();
+                ba = writeQueue.Count > 0 ? writeQueue.Peek() : null;
             }
         }
         //继续发送
@@ -343,7 +343,7 @@ public static class NetManager
         try
         {
             Socket socket = ar.AsyncState as Socket;
-            int count = socket.EndSend(ar);
+            int count = socket.EndReceive(ar);
             //断开
             if (count == 0)
             {
